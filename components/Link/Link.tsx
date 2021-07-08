@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './Link.module.css'
+import { cnLink } from './Link.const'
 
 export interface ILinkProps {
     className?: string;
@@ -18,10 +18,13 @@ export const Link: React.FC<ILinkProps> = (props: ILinkProps) => {
         children,
         disabled,
     } = props;
+    const fullClassName = cnLink({
+        disabled,
+    }, [className])
 
     return href ? (
         <a
-            className={[style.Link, className].join(' ')}
+            className={fullClassName}
             href={href}
             target={target}
         >
@@ -29,7 +32,7 @@ export const Link: React.FC<ILinkProps> = (props: ILinkProps) => {
         </a>
     ) : (
         <span
-            className={[style.Link, className, disabled && style.Link_disabled].join(' ')}
+            className={fullClassName}
         >
             {children}
         </span>
