@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Link } from '../components/Link/Link'
+import { Img } from '../components/Img/Img'
 
 export default function Home() {
     return (
@@ -26,6 +27,13 @@ export default function Home() {
             >
                 this is span
             </Link>
+
+            <Img
+                className='Test'
+                src="/images/logo42x42.jpg"
+                width={42}
+                height={42}
+            ></Img>
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
