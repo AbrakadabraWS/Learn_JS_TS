@@ -17,13 +17,13 @@ export default function Home() {
             </Head>
 
             <Link
-                className='Hui'
+                className='Test'
                 href="https://ya.ru"
             >
                 this is link
             </Link>
             <Link
-                className='Pyazda'
+                className='Best'
                 disabled
             >
                 this is span
@@ -36,7 +36,7 @@ export default function Home() {
                 height={200}
             />
 
-            <Logo 
+            <Logo
                 className="Logo"
                 src="/images/LogoYandex.png"
             />
