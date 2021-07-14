@@ -38,6 +38,7 @@ export default function Home() {
 
             <Logo className="Logo"/>
 
+
             <main className={styles.main}>
                 <h1 className={styles.title}>
                     Welcome to
