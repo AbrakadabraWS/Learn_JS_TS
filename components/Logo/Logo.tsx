@@ -7,7 +7,6 @@ import { cnLogo } from './Logo.const'
 
 export interface ILogoProps {   
     className?: string;         //добавляем НЕ обязательное свойство className тип данных строка
-    src: string;                //добавляем обязательное свойство src тип данных строка
     width?: number;              //добавляем обязательное свойство width тип данных строка
     height?: number;             //добавляем обязательное свойство height тип данных строка
     disabled?: boolean;         //добавляем НЕ обязательное свойство disabled тип данных лгический
@@ -16,7 +15,6 @@ export interface ILogoProps {
 export const Logo: React.FC<ILogoProps> = (props: ILogoProps) => {
     const {
         className,
-        src,
         width,
         height,
         disabled,
@@ -32,7 +30,7 @@ export const Logo: React.FC<ILogoProps> = (props: ILogoProps) => {
         >
             <Img
                 className={fullClassName}
-                src={src}
+                src="/images/LogoYandex.png"
                 width={width}
                 height={height}
                 alt="This is the logo."
