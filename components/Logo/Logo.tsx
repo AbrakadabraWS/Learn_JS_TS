@@ -1,7 +1,7 @@
 import React from 'react';     
 
 import { Link } from '../Link/Link'
-import { Img } from '../Img/Img'
+import Image from 'next/image'
 
 import { cnLogo } from './Logo.const'   
 
@@ -28,13 +28,13 @@ export const Logo: React.FC<ILogoProps> = (props: ILogoProps) => {
             className={fullClassName}
             href="https://ya.ru"
         >
-            <Img
+            <Image
                 className={fullClassName}
                 src="/images/LogoYandex.png"
-                width={width}
-                height={height}
                 alt="This is the logo."
-            /> 
+                width={width ? width : 50}
+                height={height ? height : 50}
+            />
         </Link>
             
     )

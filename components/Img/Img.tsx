@@ -5,12 +5,12 @@ import { cnImg } from './Img.const'   //импортируем cnLink из мо�
 
 export interface IImgProps {   /*создаем интерфейс доступный за пределами этого модуля 
                                 условноговоря интерфейс это свой личный тип данных*/
-className?: string;            //добавляем НЕ обязательное свойство className тип данных строка
-src: string;                   //добавляем НЕ обязательное свойство src тип данных строка
-width?: number;                //
-height?: number;               //
-alt?: string;
-disabled?: boolean;            //добавляем НЕ обязательное свойство disabled тип данных лгический
+    className?: string;        //добавляем НЕ обязательное свойство className тип данных строка
+    src: string;               //добавляем НЕ обязательное свойство src тип данных строка
+    width?: number;            //
+    height?: number;           //
+    alt?: string;
+    disabled?: boolean;        //добавляем НЕ обязательное свойство disabled тип данных лгический
 }
 
 export const Img: React.FC<IImgProps> = (props: IImgProps) => {
@@ -33,9 +33,9 @@ export const Img: React.FC<IImgProps> = (props: IImgProps) => {
             <Image
                 className={fullClassName}
                 src={src}
-                alt={alt?alt:""}       
-                width={width?width:50}
-                height={height?height:50}
+                alt={alt ? alt : undefined}       
+                width={width ? width : 50}
+                height={height ? height : 50}
             />
         </>
     );
