@@ -33,7 +33,7 @@ export const Img: React.FC<IImgProps> = (props: IImgProps) => {
             <Image
                 className={fullClassName}
                 src={src}
-                alt={alt ? alt : undefined}       
+                alt={alt}       
                 width={width ? width : 50}
                 height={height ? height : 50}
             />
