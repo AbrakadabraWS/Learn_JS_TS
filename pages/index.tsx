@@ -3,9 +3,9 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { Link } from '../components/Link/Link'
-import { Img } from '../components/Img/Img'
-import { Logo } from '../components/Logo/Logo'
+import { Link } from '../components/Link/Link';
+import { Img } from '../components/Img/Img';
+import { Logo } from '../components/Logo/Logo';
 
 export default function Home() {
     return (
@@ -80,6 +80,16 @@ export default function Home() {
                             Instantly deploy your Next.js site to a public URL with Vercel.
                         </p>
                     </a>
+
+                    <Link
+                        href="/calculator_index"
+                        className={styles.card}
+                    >
+                        <h2>Calculator</h2>
+                        <p>
+                            Mini project, calculator.
+                        </p>
+                    </Link>
                 </div>
             </main>
 
