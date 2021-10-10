@@ -3,9 +3,11 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { Link } from '../components/Link/Link';
+import Link from 'next/link'
+
 import { Img } from '../components/Img/Img';
 import { Logo } from '../components/Logo/Logo';
+import { MyLink } from '../components/MyLink/MyLink';
 
 export default function Home() {
     return (
@@ -16,17 +18,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <Link
-                className='Test'
-                href="https://ya.ru"
-            >
+            <Link href="https://ya.ru">
                 this is link
-            </Link>
-            <Link
-                className='Best'
-                disabled
-            >
-                this is span
             </Link>
 
             <Img
@@ -81,7 +74,7 @@ export default function Home() {
                         </p>
                     </a>
 
-                    <Link
+                    <MyLink
                         href="/calculator_index"
                         className={styles.card}
                     >
@@ -89,7 +82,7 @@ export default function Home() {
                         <p>
                             Mini project, calculator.
                         </p>
-                    </Link>
+                    </MyLink>
                 </div>
             </main>
 

@@ -1,8 +1,7 @@
 import React from 'react';      //импортируем React из модуля react
 
-import { cnLink } from './Link.const'   //импортируем cnLink из модуля ./Link.const
-
-export interface ILinkProps {   /*создаем интерфейс доступный за пределами этого модуля 
+import { cnMyLink } from './MyLink.const';
+export interface IMyLinkProps {   /*создаем интерфейс доступный за пределами этого модуля 
                                   условноговоря интерфейс это свой личный тип данных*/
     className?: string;         //добавляем НЕ обязательное свойство className тип данных строка
     href?: string;              //добавляем НЕ обязательное свойство href тип данных строка
@@ -11,7 +10,7 @@ export interface ILinkProps {   /*создаем интерфейс доступ
     disabled?: boolean;         //добавляем НЕ обязательное свойство disabled тип данных лгический
 }
 
-export const Link: React.FC<ILinkProps> = (props: ILinkProps) => {
+export const MyLink: React.FC<IMyLinkProps> = (props: IMyLinkProps) => {
     const {
         className,
         href,
@@ -19,7 +18,7 @@ export const Link: React.FC<ILinkProps> = (props: ILinkProps) => {
         children,
         disabled,
     } = props;
-    const fullClassName = cnLink({
+    const fullClassName = cnMyLink({
         disabled,
     }, [className])
 

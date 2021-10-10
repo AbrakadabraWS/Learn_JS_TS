@@ -11,8 +11,15 @@ export default function Calculator_index() {
                 {' '}
                 <Link href="/">Home!</Link>
             </h1>
-            <CalcButton className = 'CalcButton'> 1 </CalcButton>
-            <CalcButton className = 'CalcButton' disabled> 1 </CalcButton>
+            
+            <CalcButton> 
+                1
+            </CalcButton>
+
+            <CalcButton disabled> 
+                1 
+            </CalcButton>
+
         </div>
     );
 }

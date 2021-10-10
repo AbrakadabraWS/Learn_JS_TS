@@ -1,7 +1,7 @@
 .Logo {
-    background-color: #f0f;
+    border: 0px;
 }
 
 .Logo_disabled {
-    background-color: #fc0;
+    border: 0px;
 }
