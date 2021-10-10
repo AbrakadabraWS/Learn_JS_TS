@@ -1,11 +1,9 @@
 import React from 'react';   
 
-import css from './CalcButton.module.css';
-
 import { cnCalcButton } from './CalcButton.const'   
 
 export interface ICalcButtonProps {   
-    className?: string;         
+    className?: string; 
     children?: React.ReactNode; 
     disabled?: boolean;         
 }
@@ -19,10 +17,10 @@ export const CalcButton: React.FC<ICalcButtonProps> = (props: ICalcButtonProps) 
 
     const fullClassName = cnCalcButton({
         disabled,
-    }, [className])
+    }, [className])    
 
     return (
-        <div className = {fullClassName}> 
+        <div className={fullClassName}> 
             {children}
         </div>
     );

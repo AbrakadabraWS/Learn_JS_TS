@@ -1,27 +1,22 @@
 .CalcButton {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    border: 2px solid rgb(75, 75, 75);
-    background-color: rgb(225, 225, 225);
-    line-height: 43px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 
-    font-size: 20px;
+    border-radius: 25px;
+    /*line-height: 43px;
+
     font-weight: bold;
-    color: rgb(0,0,0);
-    text-align: center;
+    text-align: center;*/
 }
 
 .CalcButton_disabled {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    border: 2px solid rgb(150, 150, 150);
-    background-color: rgb(225, 225, 225);
-    line-height: 43px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 25px;    
+    /*line-height: 43px;
 
-    font-size: 20px;
     font-weight: bold;
-    color: rgb(150, 150, 150);
-    text-align: center;
+    text-align: center;*/
 }

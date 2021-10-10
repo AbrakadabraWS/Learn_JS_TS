@@ -1,5 +1,4 @@
 export const className = (style: {[key: string]: string}, name: string) => {
-    
     return (mods?: {[key: string]: string|boolean|number|undefined}, mix?: (string|undefined)[]) => {
         const modsArray: string[] = [];
 
