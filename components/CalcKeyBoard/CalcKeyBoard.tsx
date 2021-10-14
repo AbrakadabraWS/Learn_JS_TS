@@ -4,7 +4,6 @@ import css from './CalcKeyBoard.module.css';
 
 import { cnCalcKeyBoard } from './CalcKeyBoard.const';
 import { CalcButton } from '../CalcButton/CalcButton';
-
 export interface ICalcKeyBoardProps {   
     className?: string; 
     children?: React.ReactNode; 
@@ -24,25 +23,84 @@ export const CalcKeyBoard: React.FC<ICalcKeyBoardProps> = (props: ICalcKeyBoardP
 
     return (
         <div className={fullClassName}> 
-            <CalcButton className = {css.N0}> 0 </CalcButton>
-            <CalcButton className = {css.N1}> 1 </CalcButton>
-            <CalcButton className = {css.N2}> 2 </CalcButton>
-            <CalcButton className = {css.N3}> 3 </CalcButton>
-            <CalcButton className = {css.N4}> 4 </CalcButton>
-            <CalcButton className = {css.N5}> 5 </CalcButton>
-            <CalcButton className = {css.N6}> 6 </CalcButton>
-            <CalcButton className = {css.N7}> 7 </CalcButton>
-            <CalcButton className = {css.N8}> 8 </CalcButton>
-            <CalcButton className = {css.N9}> 9 </CalcButton>
-            <CalcButton className = {css.Coma}> , </CalcButton>
-            <CalcButton className = {css.AC}> AC </CalcButton>
-            <CalcButton className = {css.Sign}> +- </CalcButton>
-            <CalcButton className = {css.Percent}> % </CalcButton>
-            <CalcButton className = {css.Division}> / </CalcButton>
-            <CalcButton className = {css.Multiplication}> x </CalcButton>
-            <CalcButton className = {css.Minus}> - </CalcButton>
-            <CalcButton className = {css.Plus}> + </CalcButton>
-            <CalcButton className = {css.Enter}> = </CalcButton>
+            <CalcButton 
+                className = {css.N0}
+                type = "Number"
+            > 0 </CalcButton>
+            <CalcButton 
+                className = {css.N1}
+                type = "Number"
+            > 1 </CalcButton>
+            <CalcButton 
+                className = {css.N2}
+                type = "Number"
+            > 2 </CalcButton>
+            <CalcButton 
+                className = {css.N3}
+                type = "Number"
+            > 3 </CalcButton>
+            <CalcButton 
+                className = {css.N4}
+                type = "Number"
+            > 4 </CalcButton>
+            <CalcButton 
+                className = {css.N5}
+                type = "Number"
+            > 5 </CalcButton>
+            <CalcButton 
+                className = {css.N6}
+                type = "Number"
+            > 6 </CalcButton>
+            <CalcButton 
+                className = {css.N7}
+                type = "Number"
+            > 7 </CalcButton>
+            <CalcButton 
+                className = {css.N8}
+                type = "Number"
+            > 8 </CalcButton>
+            <CalcButton 
+                className = {css.N9}
+                type = "Number"
+            > 9 </CalcButton>
+            <CalcButton 
+                className = {css.Coma}
+                type = "Number"
+            > , </CalcButton>
+
+            <CalcButton 
+                className = {css.AC}
+                type = "Special"
+            > AC </CalcButton>
+            <CalcButton 
+                className = {css.Sign}
+                type = "Special"
+            > +- </CalcButton>
+            <CalcButton 
+                className = {css.Percent}
+                type = "Special"
+            > % </CalcButton>
+
+            <CalcButton 
+                className = {css.Division}
+                type = "Sign"
+            > / </CalcButton>
+            <CalcButton 
+                className = {css.Multiplication}
+                type = "Sign"
+            > x </CalcButton>
+            <CalcButton 
+                className = {css.Minus}
+                type = "Sign"
+            > - </CalcButton>
+            <CalcButton 
+                className = {css.Plus}
+                type = "Sign"
+            > + </CalcButton>
+            <CalcButton 
+                className = {css.Enter}
+                type = "Sign"
+            > = </CalcButton>
         </div>
     );
 };

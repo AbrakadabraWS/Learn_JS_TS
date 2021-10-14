@@ -4,10 +4,6 @@
     justify-items: center;
 
     border-radius: 25px;
-    /*line-height: 43px;
-
-    font-weight: bold;
-    text-align: center;*/
 }
 
 .CalcButton_disabled {
@@ -15,8 +11,14 @@
     align-items: center;
     justify-items: center;
     border-radius: 25px;    
-    /*line-height: 43px;
+}
 
-    font-weight: bold;
-    text-align: center;*/
+.CalcButton_activeNumbers {
+    background-color: rgb(115, 115, 115);
+}
+.CalcButton_activeSigns {
+    background-color: rgb(251, 199, 142);
+}
+.CalcButton_activeSpecial {
+    background-color: rgb(217, 217, 217);
 }

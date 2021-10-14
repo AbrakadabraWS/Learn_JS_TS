@@ -4,7 +4,7 @@ export const className = (style: {[key: string]: string}, name: string) => {
 
         if (mods) {
             for (let key in mods) {
-                if (typeof mods[key] === 'boolean') {
+                if (typeof mods[key] === 'boolean' && mods[key]) {
                     modsArray.push(style[`${name}_${key}`]);
                 } else if (mods[key]) {
                     modsArray.push(style[`${name}_${key}_${mods[key]}`]);
