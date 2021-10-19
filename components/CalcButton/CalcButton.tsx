@@ -7,7 +7,7 @@ export interface ICalcButtonProps {
     type?: string;
     children?: React.ReactNode; 
     disabled?: boolean; 
-    onEvent?: () => void;        
+    onEvent?: (buttonValue: string) => void;        
 }
 
 export const CalcButton: React.FC<ICalcButtonProps> = (props: ICalcButtonProps) => {
@@ -16,6 +16,7 @@ export const CalcButton: React.FC<ICalcButtonProps> = (props: ICalcButtonProps) 
         type,
         children,
         disabled,
+        onEvent,
     } = props;
 
     const [activeNumbers, setActiveNumbers] = useState(false);
@@ -29,11 +30,14 @@ export const CalcButton: React.FC<ICalcButtonProps> = (props: ICalcButtonProps) 
         activeSpecial,
     }, [className]);
 
-    function SetLog(){
-        console.log("Мышка на кнопке")
+    function MouseClickFunc(){
+        console.log("Нажата кнопка "+ children)
+        if(onEvent){
+            onEvent(children?children.toString():"")
+        }
     }
 
-    function MouseFunc(){
+    function MouseMoveFunc(){
         switch(type){
             case 'Number':
                 setActiveNumbers(!activeNumbers);
@@ -46,16 +50,15 @@ export const CalcButton: React.FC<ICalcButtonProps> = (props: ICalcButtonProps) 
                 break;
             default:
                 break;
-        }   
-        
+        }      
     }
 
     return (
         <div 
             className={fullClassName} 
-            onClick={() => console.log("clicked")}
-            onMouseOver={MouseFunc}
-            onMouseOut={MouseFunc}
+            onClick={MouseClickFunc}
+            onMouseOver={MouseMoveFunc}
+            onMouseOut={MouseMoveFunc}
         >
             {children}
         </div>

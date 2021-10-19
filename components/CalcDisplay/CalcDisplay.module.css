@@ -1,0 +1,20 @@
+.CalcDisplay {
+    width: 215px;
+    height: 70px;
+
+    background-color: rgb(1, 1, 1);
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: sans-serif;
+
+    display: grid;
+    justify-content: right;
+    align-content: center;
+}
+
+.CalcDisplay_disabled {
+    display: grid;
+    align-items: center;
+    justify-items: center;    
+}
+

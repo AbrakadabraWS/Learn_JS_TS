@@ -7,7 +7,8 @@ import { CalcButton } from '../CalcButton/CalcButton';
 export interface ICalcKeyBoardProps {   
     className?: string; 
     children?: React.ReactNode; 
-    disabled?: boolean;         
+    disabled?: boolean;  
+    onEvent?: (keyBoardValue: string) => void;       
 }
 
 export const CalcKeyBoard: React.FC<ICalcKeyBoardProps> = (props: ICalcKeyBoardProps) => {
@@ -15,92 +16,119 @@ export const CalcKeyBoard: React.FC<ICalcKeyBoardProps> = (props: ICalcKeyBoardP
         className,
         children,
         disabled,
+        onEvent,
     } = props;
 
     const fullClassName = cnCalcKeyBoard({
         disabled,
     }, [className])    
 
+    function buttonEvent(buttonValue: string){
+        console.log("Заберем из кнопки какой то тект: "+ buttonValue)
+        if(onEvent){
+            onEvent(buttonValue)
+        }
+    }
+
     return (
         <div className={fullClassName}> 
             <CalcButton 
                 className = {css.N0}
                 type = "Number"
-            > 0 </CalcButton>
+                onEvent = {buttonEvent}
+            >0</CalcButton>
             <CalcButton 
                 className = {css.N1}
                 type = "Number"
-            > 1 </CalcButton>
+                onEvent = {buttonEvent}
+            >1</CalcButton>
             <CalcButton 
                 className = {css.N2}
                 type = "Number"
-            > 2 </CalcButton>
+                onEvent = {buttonEvent}
+            >2</CalcButton>
             <CalcButton 
                 className = {css.N3}
                 type = "Number"
-            > 3 </CalcButton>
+                onEvent = {buttonEvent}
+            >3</CalcButton>
             <CalcButton 
                 className = {css.N4}
                 type = "Number"
-            > 4 </CalcButton>
+                onEvent = {buttonEvent}
+            >4</CalcButton>
             <CalcButton 
                 className = {css.N5}
                 type = "Number"
-            > 5 </CalcButton>
+                onEvent = {buttonEvent}
+            >5</CalcButton>
             <CalcButton 
                 className = {css.N6}
                 type = "Number"
-            > 6 </CalcButton>
+                onEvent = {buttonEvent}
+            >6</CalcButton>
             <CalcButton 
                 className = {css.N7}
                 type = "Number"
-            > 7 </CalcButton>
+                onEvent = {buttonEvent}
+            >7</CalcButton>
             <CalcButton 
                 className = {css.N8}
                 type = "Number"
-            > 8 </CalcButton>
+                onEvent = {buttonEvent}
+            >8</CalcButton>
             <CalcButton 
                 className = {css.N9}
                 type = "Number"
-            > 9 </CalcButton>
+                onEvent = {buttonEvent}
+            >9</CalcButton>
             <CalcButton 
                 className = {css.Coma}
                 type = "Number"
-            > , </CalcButton>
+                onEvent = {buttonEvent}
+            >,</CalcButton>
 
             <CalcButton 
                 className = {css.AC}
                 type = "Special"
-            > AC </CalcButton>
+                onEvent = {buttonEvent}
+            >AC</CalcButton>
             <CalcButton 
                 className = {css.Sign}
                 type = "Special"
-            > +- </CalcButton>
+                onEvent = {buttonEvent}
+            >+-</CalcButton>
             <CalcButton 
                 className = {css.Percent}
                 type = "Special"
-            > % </CalcButton>
+                onEvent = {buttonEvent}
+            >%</CalcButton>
 
             <CalcButton 
                 className = {css.Division}
                 type = "Sign"
-            > / </CalcButton>
+                onEvent = {buttonEvent}
+            >/</CalcButton>
             <CalcButton 
                 className = {css.Multiplication}
                 type = "Sign"
-            > x </CalcButton>
+                onEvent = {buttonEvent}
+            >x</CalcButton>
             <CalcButton 
                 className = {css.Minus}
                 type = "Sign"
-            > - </CalcButton>
+                onEvent = {buttonEvent}
+            >-</CalcButton>
             <CalcButton 
                 className = {css.Plus}
                 type = "Sign"
-            > + </CalcButton>
+                onEvent = {buttonEvent}
+            >+</CalcButton>
             <CalcButton 
                 className = {css.Enter}
                 type = "Sign"
-            > = </CalcButton>
+                onEvent = {buttonEvent}
+            >=</CalcButton>
         </div>
     );
 };
